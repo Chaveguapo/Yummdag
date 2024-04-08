@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { RecipeCard } from "./RecipeCard";
+import "./SearchIngredient.css";
 
 function SearchIngredient() {
   //To store user input
@@ -45,7 +46,9 @@ function SearchIngredient() {
       ></input>
       <button onClick={getRecipes}>SEARCH</button>
       <ul>
-        <RecipeCard />
+        {recipes.map((recipe, index) => (
+          <RecipeCard key={index} title={recipe.title} image={recipe.image} />
+        ))}
       </ul>
     </div>
   );
