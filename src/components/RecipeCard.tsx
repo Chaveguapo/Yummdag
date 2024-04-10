@@ -20,8 +20,8 @@ export function RecipeCard({
         <img src={image} alt={title} />
         <h3>{title}</h3>
 
+        <h2>Missed Ingredients</h2>
         <p>{missedIngredientCount}</p>
-
         <ul>
           {missedIngredients.map((ingredient, index) => (
             <li key={index}>{ingredient.originalName}</li>

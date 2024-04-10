@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { RecipeCard } from "./RecipeCard.tsx";
 import "./SearchIngredient.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 function SearchIngredient() {
   //To store user input
