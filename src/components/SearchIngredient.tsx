@@ -52,6 +52,7 @@ function SearchIngredient() {
             title={recipe.title}
             image={recipe.image}
             missedIngredientCount={recipe.missedIngredientCount}
+            missedIngredients={recipe.missedIngredients}
           />
         ))}
       </ul>
