@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { RecipeCard } from "./RecipeCard";
+import { RecipeCard } from "./RecipeCard.tsx";
 import "./SearchIngredient.css";
 
 function SearchIngredient() {
@@ -47,7 +47,12 @@ function SearchIngredient() {
       <button onClick={getRecipes}>SEARCH</button>
       <ul>
         {recipes.map((recipe, index) => (
-          <RecipeCard key={index} title={recipe.title} image={recipe.image} />
+          <RecipeCard
+            key={index}
+            title={recipe.title}
+            image={recipe.image}
+            missedIngredientCount={recipe.missedIngredientCount}
+          />
         ))}
       </ul>
     </div>
