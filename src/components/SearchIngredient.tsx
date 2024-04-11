@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { RecipeCard } from "./RecipeCard.tsx";
 import "./SearchIngredient.css";
-import "bootstrap/dist/css/bootstrap.css";
 
 function SearchIngredient() {
   //To store user input
@@ -37,7 +36,7 @@ function SearchIngredient() {
   }
 
   return (
-    <div>
+    <div className="container">
       <h3>Search by ingredients that you have in your fridge! </h3>
       <input
         type="search"

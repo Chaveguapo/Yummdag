@@ -16,19 +16,24 @@ export function RecipeCard({
 }: RecipeProps) {
   return (
     <div>
-      <section className="card-container">
-        <img src={image} alt={title} />
-        <h3>{title}</h3>
+      <div className="card" style={{ width: "18rem" }}>
+        <img src={image} alt={title} className="card-img-top" />
+        <div className="card-body">
+          <h3 className="card-title">{title}</h3>
 
-        <h2>Missed Ingredients</h2>
-        <p>{missedIngredientCount}</p>
-        <ul>
-          {missedIngredients.map((ingredient, index) => (
-            <li key={index}>{ingredient.originalName}</li>
-          ))}
-        </ul>
-        <button>Open recipe</button>
-      </section>
+          <h6>Missed Ingredients</h6>
+          <p className="card-text">{missedIngredientCount}</p>
+          <ul>
+            {missedIngredients.map((ingredient, index) => (
+              <li key={index}>{ingredient.originalName}</li>
+            ))}
+          </ul>
+
+          <a href="#" className="btn btn-primary">
+            See more
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
