@@ -13,84 +13,63 @@ export function RecipeCard({
   image,
   missedIngredientCount,
   missedIngredients,
+  likes,
 }: RecipeProps) {
   return (
     <div className="container">
-      <div className="card" style={{ width: "18rem" }}>
-        <img src={image} alt={title} className="card-img-top" />
-        <div className="card-body">
-          <h3 className="card-title">{title}</h3>
-
-          <h6>Missed Ingredients</h6>
-          <p className="card-text">{missedIngredientCount}</p>
-          <ul>
-            {missedIngredients.map((missed, index) => (
-              <li key={index}>{missed.name}</li>
-            ))}
-          </ul>
-
-          <a href="#" className="btn btn-primary">
-            See more
-          </a>
-        </div>
-      </div>
-
-      {/* demo starts her */}
-
       <div className="container-fluid">
-        <div className="px-lg-5">
-          {/* <!-- For demo purpose --> */}
-          <div className="row py-5">
-            <div className="col-lg-12 mx-auto"></div>
-          </div>
-          {/* <!-- End --> */}
-
+        <div className="py-lg-5">
           <div className="row">
             {/* <!-- Gallery item --> */}
             <div className="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div className="bg-white rounded shadow-sm">
+              <div className="bg-white shadow p-3 mb-6 bg-body-tertiary rounded">
                 <img
                   src={image}
                   alt={title}
                   className="img-fluid card-img-top"
                 />
-                <div className="p-4">
+                <div className="p-2">
                   <h5>
                     <a href="#" className="text-dark">
                       {title}
                     </a>
                   </h5>
-                  <p className="small text-muted mb-0">
+                  <div className="small text-muted mb-0">
+                    <br /> <span className="material-icons">favorite</span>
+                    <p>{likes}</p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                  </p>
-                  <div className="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                  </div>
+                  <div className="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4 ">
                     <p className="small mb-0">
-                      <i className="fa fa-picture-o mr-2"></i>
-
-                      <span className="font-weight-bold">
+                      <span className="font-weight-bold ">
                         This recipe has {missedIngredientCount} missed
                         ingredients like:
                       </span>
 
+                      <br />
                       {missedIngredients.map((ingredient, index) => (
                         <span
                           key={index}
-                          className="badge rounded-pill text-bg-danger mx-2"
+                          className="badge rounded-pill text-bg-danger mx-1 "
                         >
                           {ingredient.name}
                         </span>
                       ))}
                     </p>
                   </div>
+                  <div className="py-1  px-1 text-right">
+                    <button
+                      type="button"
+                      className="btn btn-outline-success"
+                      onClick={() => alert("More recipe details coming soon!")}
+                    >
+                      See more!
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
             {/* <!-- End --> */}
-          </div>
-          <div className="py-5 text-right">
-            <a href="#" className="btn btn-dark px-5 py-3 text-uppercase">
-              Show me more
-            </a>
           </div>
         </div>
       </div>
