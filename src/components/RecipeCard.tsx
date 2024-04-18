@@ -16,13 +16,13 @@ export function RecipeCard({
   likes,
 }: RecipeProps) {
   return (
-    <div className="container">
-      <div className="container-fluid">
+    <div className="container text-center">
+      <div className="container-fluid ">
         <div className="py-lg-5">
-          <div className="row">
+          <div className="row ">
             {/* <!-- Gallery item --> */}
-            <div className="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div className="bg-white shadow p-3 mb-6 bg-body-tertiary rounded">
+            <div className="col-xl-5 col-lg-5 col-md-3 mb-4">
+              <div className="col bg-white shadow p-3 mb-6 bg-body-tertiary rounded">
                 <img
                   src={image}
                   alt={title}
@@ -57,7 +57,7 @@ export function RecipeCard({
                       ))}
                     </p>
                   </div>
-                  <div className="py-1  px-1 text-right">
+                  <div className="py-1 px-1 text-right">
                     <button
                       type="button"
                       className="btn btn-outline-success"
@@ -69,7 +69,6 @@ export function RecipeCard({
                 </div>
               </div>
             </div>
-            {/* <!-- End --> */}
           </div>
         </div>
       </div>

@@ -1,22 +1,18 @@
 import { useState } from "react";
-import { RecipeCard } from "./RecipeCard.tsx";
+import { RecipeCard } from "./RecipeCard";
 import "./SearchIngredient.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 function SearchIngredient() {
-  //To store user input
   const [inputIngredient, setInputIngredient] = useState("");
-
-  // To store the fetched recipes
   const [recipes, setRecipes] = useState([]);
 
-  //** this function get the recipes from the API */
   function getRecipes() {
+    console.log("getRecipes");
     if (!inputIngredient.trim()) return;
 
     fetch(
-      "https://api.spoonacular.com/recipes/findByIngredients?ingredients=" +
-        inputIngredient,
+      `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${inputIngredient}`,
       {
         method: "get",
         headers: {
@@ -25,12 +21,11 @@ function SearchIngredient() {
         },
       }
     )
-      .then((response) => {
-        if (response.ok) return response.json();
-      })
+      .then((response) =>
+        response.ok ? response.json() : Promise.reject(response)
+      )
       .then((data) => {
         console.log(data);
-        // Save the recipes to state
         setRecipes(data);
       })
       .catch((error) => console.log("Error fetching data", error));
@@ -38,15 +33,43 @@ function SearchIngredient() {
 
   return (
     <div className="container">
-      <h3>Search by ingredients that you have in your fridge! </h3>
-      <input
-        type="search"
-        value={inputIngredient}
-        placeholder="Enter ingredients,separated by commas"
-        onChange={(e) => setInputIngredient(e.target.value)}
-      ></input>
-      <button onClick={getRecipes}>SEARCH</button>
-      <ul>
+      <div className="navbar bg-body-tertiary mx-auto p-2">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
+            <img
+              src="\logo.svg"
+              alt="Logo"
+              width="30"
+              height="24"
+              className="d-inline-block align-text-top"
+            />
+          </a>
+          <h3 className="navbar-text fs-6 fw-2 text mx-auto p-2">
+            Search by ingredients that you have in your fridge!
+          </h3>
+          <form
+            className="d-flex"
+            role="search"
+            onSubmit={(e) => {
+              e.preventDefault();
+              getRecipes();
+            }}
+          >
+            <input
+              className="form-control me-2"
+              type="search"
+              value={inputIngredient}
+              placeholder="Enter ingredients separated by comma"
+              aria-label="Search"
+              onChange={(e) => setInputIngredient(e.target.value)}
+            />
+            <button className="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+      <div className="row">
         {recipes.map((recipe, index) => (
           <RecipeCard
             key={index}
@@ -57,7 +80,7 @@ function SearchIngredient() {
             likes={recipe.likes}
           />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
