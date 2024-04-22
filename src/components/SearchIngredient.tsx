@@ -33,7 +33,7 @@ function SearchIngredient() {
 
   return (
     <div className="container">
-      <div className="navbar bg-body-tertiary mx-auto p-3 width: 200px">
+      <div className="navbar bg-body-tertiary mx-auto p-3 width: 300px rounded-3 ">
         <a className="navbar-brand" href="#">
           <img
             src="\logo.svg"
@@ -43,11 +43,11 @@ function SearchIngredient() {
             className="d-inline-block align-text-top"
           />
         </a>
-        <h3 className="navbar-text fs-5 fw-2 text mx-auto p-2">
+        <h3 className="navbar-text fs-5 fw-2 text mx-auto p-2  ">
           Search by ingredients that you have in your fridge!
         </h3>
         <form
-          className="d-flex"
+          className="d-flex p-2 "
           role="search"
           onSubmit={(e) => {
             e.preventDefault();
@@ -55,7 +55,7 @@ function SearchIngredient() {
           }}
         >
           <input
-            className="form-control me-2"
+            className="form-control me-2  "
             type="search"
             value={inputIngredient}
             placeholder="Enter ingredients separated by comma"
@@ -79,6 +79,7 @@ function SearchIngredient() {
           />
         ))}
       </div>
+      <div></div>
     </div>
   );
 }
