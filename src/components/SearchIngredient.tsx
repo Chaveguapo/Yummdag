@@ -33,41 +33,39 @@ function SearchIngredient() {
 
   return (
     <div className="container">
-      <div className="navbar bg-body-tertiary mx-auto p-2">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            <img
-              src="\logo.svg"
-              alt="Logo"
-              width="30"
-              height="24"
-              className="d-inline-block align-text-top"
-            />
-          </a>
-          <h3 className="navbar-text fs-6 fw-2 text mx-auto p-2">
-            Search by ingredients that you have in your fridge!
-          </h3>
-          <form
-            className="d-flex"
-            role="search"
-            onSubmit={(e) => {
-              e.preventDefault();
-              getRecipes();
-            }}
-          >
-            <input
-              className="form-control me-2"
-              type="search"
-              value={inputIngredient}
-              placeholder="Enter ingredients separated by comma"
-              aria-label="Search"
-              onChange={(e) => setInputIngredient(e.target.value)}
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
+      <div className="navbar bg-body-tertiary mx-auto p-3 width: 200px">
+        <a className="navbar-brand" href="#">
+          <img
+            src="\logo.svg"
+            alt="Logo"
+            width="30"
+            height="24"
+            className="d-inline-block align-text-top"
+          />
+        </a>
+        <h3 className="navbar-text fs-5 fw-2 text mx-auto p-2">
+          Search by ingredients that you have in your fridge!
+        </h3>
+        <form
+          className="d-flex"
+          role="search"
+          onSubmit={(e) => {
+            e.preventDefault();
+            getRecipes();
+          }}
+        >
+          <input
+            className="form-control me-2"
+            type="search"
+            value={inputIngredient}
+            placeholder="Enter ingredients separated by comma"
+            aria-label="Search"
+            onChange={(e) => setInputIngredient(e.target.value)}
+          />
+          <button className="btn btn-outline-success" type="submit">
+            Search
+          </button>
+        </form>
       </div>
       <div className="row">
         {recipes.map((recipe, index) => (

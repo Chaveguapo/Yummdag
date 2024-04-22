@@ -16,61 +16,60 @@ export function RecipeCard({
   likes,
 }: RecipeProps) {
   return (
-    <div className="container text-center">
-      <div className="container-fluid ">
-        <div className="py-lg-5">
-          <div className="row ">
-            {/* <!-- Gallery item --> */}
-            <div className="col-xl-5 col-lg-5 col-md-3 mb-4">
-              <div className="col bg-white shadow p-3 mb-6 bg-body-tertiary rounded">
-                <img
-                  src={image}
-                  alt={title}
-                  className="img-fluid card-img-top"
-                />
-                <div className="p-2">
-                  <h5>
-                    <a href="#" className="text-dark">
-                      {title}
-                    </a>
-                  </h5>
-                  <div className="small text-muted mb-0">
-                    <br /> <span className="material-icons">favorite</span>
-                    <p>{likes}</p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                  </div>
-                  <div className="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4 ">
-                    <p className="small mb-0">
-                      <span className="font-weight-bold ">
-                        This recipe has {missedIngredientCount} missed
-                        ingredients like:
-                      </span>
-
-                      <br />
-                      {missedIngredients.map((ingredient, index) => (
-                        <span
-                          key={index}
-                          className="badge rounded-pill text-bg-danger mx-1 "
-                        >
-                          {ingredient.name}
-                        </span>
-                      ))}
-                    </p>
-                  </div>
-                  <div className="py-1 px-1 text-right">
-                    <button
-                      type="button"
-                      className="btn btn-outline-success"
-                      onClick={() => alert("More recipe details coming soon!")}
-                    >
-                      See more!
-                    </button>
-                  </div>
+    <div className="col-xs-10 col-md-4 col-sm-">
+      <div className="container-fluid-md ">
+        <section>
+          <div className="shadow bg-body-tertiary">
+            <img
+              src={image}
+              alt={title}
+              className="card-img-top img-fluid rounded-5 rounded-top-0"
+            />
+            <div className="card-block p-2">
+              <h6>
+                <a href="#" className="text-dark card-title">
+                  {title}
+                </a>
+              </h6>
+              <div className="medium text-muted mb-0">
+                <div className="d-flex justify-content-center">
+                  <span className="material-icons">favorite</span>
+                  <span className="p-2 ">{likes}</span>
                 </div>
+                <p className="text-center card-text fs-6 fw-normal">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                </p>
+              </div>
+              <div className="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4 ">
+                <p className="small mb-0">
+                  <span className="font-weight-bold text-center ">
+                    This recipe has {missedIngredientCount} missed ingredients
+                    like:
+                  </span>
+
+                  <br />
+                  {missedIngredients.map((ingredient, index) => (
+                    <span
+                      key={index}
+                      className="badge rounded-pill text-bg-danger mx-1 "
+                    >
+                      {ingredient.name}
+                    </span>
+                  ))}
+                </p>
+              </div>
+              <div className="py-2 px-2 text-right">
+                <button
+                  type="button"
+                  className="btn btn-outline-success"
+                  onClick={() => alert("More recipe details coming soon!")}
+                >
+                  See more!
+                </button>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );
