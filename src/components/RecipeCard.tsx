@@ -16,33 +16,28 @@ export function RecipeCard({
   likes,
 }: RecipeProps) {
   return (
-    <div className="col-xs-10 col-md-4 col-sm-">
-      <div className="container-fluid-md ">
+    <div className="col-sm-12 col-lg-4">
+      <div className="container-fluid-md  ">
         <section>
-          <div className="shadow bg-body-tertiary">
+          <div className="shadow bg-body-tertiary card border-secondary mb-3 align-items-stretch ">
             <img
               src={image}
               alt={title}
               className="card-img-top img-fluid rounded-5 rounded-top-0"
             />
             <div className="card-block p-2">
-              <h6>
-                <a href="#" className="text-dark card-title">
+              <h6 className="p-2">
+                <a href="#" className="text-dark card-title p-1">
                   {title}
                 </a>
               </h6>
-              <div className="medium text-muted mb-0">
-                <div className="d-flex justify-content-center">
-                  <span className="material-icons">favorite</span>
-                  <span className="p-2 ">{likes}</span>
-                </div>
-                <p className="text-center card-text fs-6 fw-normal">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                </p>
+              <div className="d-flex flex-wrap justify-content-center">
+                <span className="material-icons">favorite</span>
+                <span className="px-2">{likes}</span>
               </div>
-              <div className="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4 ">
-                <p className="small mb-0">
-                  <span className="font-weight-bold text-center ">
+              <div className="d-flex align-items-center  rounded-pill bg-light ">
+                <p className="small mb-0 card-body ">
+                  <span className="font-weight-bold ">
                     This recipe has {missedIngredientCount} missed ingredients
                     like:
                   </span>
@@ -61,7 +56,7 @@ export function RecipeCard({
               <div className="py-2 px-2 text-right">
                 <button
                   type="button"
-                  className="btn btn-outline-success"
+                  className="btn btn-outline-success px-4 "
                   onClick={() => alert("More recipe details coming soon!")}
                 >
                   See more!
