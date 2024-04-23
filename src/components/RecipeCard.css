@@ -1,5 +1,16 @@
-.card-container {
+.fixed-height-card {
+  height: 300px; /* Set a fixed height according to your design needs */
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  justify-content: space-between; /* Distributes space between elements inside the card */
+}
+
+.fixed-height-card img {
+  height: 150px; /* Fixed height for images */
+  object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
+}
+.card-title {
+  height: 40px; /* Adjust height as necessary */
+  line-height: 20px; /* Adjust line height to vertically align text if necessary */
+  overflow: hidden; /* Ensures excess text is not visible */
 }

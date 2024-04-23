@@ -69,17 +69,18 @@ function SearchIngredient() {
       </div>
       <div className="row">
         {recipes.map((recipe, index) => (
-          <RecipeCard
-            key={index}
-            title={recipe.title}
-            image={recipe.image}
-            missedIngredientCount={recipe.missedIngredientCount}
-            missedIngredients={recipe.missedIngredients}
-            likes={recipe.likes}
-          />
+          <div className="col-sm-12 col-lg-4 col-md-6" key={index}>
+            <RecipeCard
+              key={index}
+              title={recipe.title}
+              image={recipe.image}
+              missedIngredientCount={recipe.missedIngredientCount}
+              missedIngredients={recipe.missedIngredients}
+              likes={recipe.likes}
+            />
+          </div>
         ))}
       </div>
-      <div></div>
     </div>
   );
 }
