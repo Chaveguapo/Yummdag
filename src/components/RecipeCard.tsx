@@ -18,7 +18,7 @@ export function RecipeCard({
   return (
     <div>
       <section className="container p-2">
-        <div className="shadow bg-body-tertiary card mb-3 ">
+        <div className="shadow bg-body-tertiary card mb-3 fixed-height-card ">
           <img
             src={image}
             alt={title}
