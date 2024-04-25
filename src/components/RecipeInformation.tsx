@@ -1,33 +1,38 @@
 function RecipeInformation() {
   return (
-    <div>
-      <h1>Name of recipe</h1>
-      <img src="https://placehold.co/800x400" className="img-fluid" alt="" />
-      <div>
+    <div className="container p-2">
+      <div className="card text-bg-dark  text-black">
+        <img
+          src="https://placehold.co/600x400"
+          className="card-img"
+          alt="..."
+        />
+        <div className="card-img-overlay align-self-start ">
+          <h5 className="card-title">Card title</h5>
+          <p className="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </p>
+        </div>
+      </div>
+      <div className="d-flex flex-row mb-3 justify-content-evenly gap-5 mt-5 mb-5 ">
         <div>
           <span className="material-icons">schedule</span>
           <p>Cooking time</p>
         </div>
-        <div className="d-flex flex-wrap justify-content-center">
+        <div className="">
           <span className="material-icons">favorite</span>
           <span className="px-2">likes</span>
         </div>
       </div>
-      <div className="table-responsive">
-        <table className="table align-middle" />
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Ingredients</th>
-          </tr>
-        </thead>
-
-        <tr>
-          <th scope="row">1</th>
-          <td>Ingredients 1</td>
-        </tr>
+      <div className="d-flex align-items-start">
+        <ul className="list-group-numbered ">
+          <h3>Ingredients</h3>
+          <li className="list-group-item">An item</li>
+        </ul>
       </div>
-      <h3>Let's start with...</h3>
+      <div></div>
+      <h3 className="font-monospace ">Let's start with...</h3>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
