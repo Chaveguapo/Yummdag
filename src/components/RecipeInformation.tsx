@@ -1,19 +1,13 @@
 function RecipeInformation() {
   return (
-    <div className="container p-2">
+    <div className="container p-2 ">
+      <h3 className="font-monospace justify-content-start p-3">Recipe title</h3>
       <div className="card text-bg-dark  text-black">
         <img
-          src="https://placehold.co/600x400"
+          src="https://placehold.co/200x100"
           className="card-img"
           alt="..."
         />
-        <div className="card-img-overlay align-self-start ">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
-        </div>
       </div>
       <div className="d-flex flex-row mb-3 justify-content-evenly gap-5 mt-5 mb-5 ">
         <div>
