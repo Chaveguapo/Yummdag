@@ -61,9 +61,9 @@ export function RecipeCard({
             </div>
             <div className="py-2 px-2 text-right">
               <button
-                type="button"
+                type="submit"
                 className="btn btn-outline-success px-4 "
-                onClick={() => alert("More recipe details coming soon!")}
+                // onClick={(e) => e.target.value}
               >
                 See more!
               </button>

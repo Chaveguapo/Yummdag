@@ -9,7 +9,7 @@ function App() {
     <>
       <div>
         <SearchIngredient />
-        <RecipeInformation />
+        {/* <RecipeInformation /> */}
       </div>
     </>
   );
