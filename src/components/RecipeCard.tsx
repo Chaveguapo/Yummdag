@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./RecipeCard.css";
 
 export interface RecipeProps {
@@ -6,6 +7,7 @@ export interface RecipeProps {
   missedIngredientCount: number;
   missedIngredients: { name: string }[];
   likes: number;
+  id: number;
 }
 
 export function RecipeCard({
@@ -14,6 +16,7 @@ export function RecipeCard({
   missedIngredientCount,
   missedIngredients,
   likes,
+  id,
 }: RecipeProps) {
   return (
     <div>
@@ -26,16 +29,12 @@ export function RecipeCard({
           />
           <div className=" p-2">
             <h6 className="p-3 card-title font-monospace ">
-              <a
-                href="#"
+              <Link
+                to={`/recipe-information/${id}`}
                 className="text-dark card-title p-1 "
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert("More recipe details coming soon!");
-                }}
               >
                 {title}
-              </a>
+              </Link>
             </h6>
             <div className="d-flex flex-wrap justify-content-center">
               <span className="material-icons">favorite</span>
@@ -60,13 +59,12 @@ export function RecipeCard({
               </p>
             </div>
             <div className="py-2 px-2 text-right">
-              <button
-                type="submit"
+              <Link
+                to={`/recipe-information/${id}`}
                 className="btn btn-outline-success px-4 "
-                // onClick={(e) => e.target.value}
               >
                 See more!
-              </button>
+              </Link>
             </div>
           </div>
         </div>

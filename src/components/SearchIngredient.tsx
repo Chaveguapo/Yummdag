@@ -3,10 +3,18 @@ import { RecipeCard } from "./RecipeCard";
 import "./SearchIngredient.css";
 import "bootstrap/dist/css/bootstrap.css";
 
+interface Recipe {
+  id: number;
+  title: string;
+  image: string;
+  missedIngredientCount: number;
+  missedIngredients: { name: string }[];
+  likes: number;
+}
+
 function SearchIngredient() {
   const [inputIngredient, setInputIngredient] = useState("");
-  const [recipes, setRecipes] = useState([]);
-
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
   function getRecipes() {
     console.log("getRecipes");
     if (!inputIngredient.trim()) return;
@@ -77,6 +85,7 @@ function SearchIngredient() {
               missedIngredientCount={recipe.missedIngredientCount}
               missedIngredients={recipe.missedIngredients}
               likes={recipe.likes}
+              id={recipe.id}
             />
           </div>
         ))}

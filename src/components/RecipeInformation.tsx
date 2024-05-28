@@ -1,7 +1,13 @@
+import { useParams } from "react-router-dom";
+
 function RecipeInformation() {
+  const { id } = useParams<{ id: string }>();
+
   return (
     <div className="container p-2 ">
-      <h3 className="font-monospace justify-content-start p-3">Recipe title</h3>
+      <h3 className="font-monospace justify-content-start p-3">
+        Recipe title{id}
+      </h3>
       <div className="card text-bg-dark  text-black">
         <img
           src="https://placehold.co/200x100"
@@ -27,15 +33,7 @@ function RecipeInformation() {
       </div>
       <div></div>
       <h3 className="font-monospace ">Let's start with...</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
+      <p></p>
     </div>
   );
 }

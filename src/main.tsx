@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
   },
   {
-    path: "/recipe-information",
+    path: "/recipe-information/:id",
     element: <RecipeInformation />,
   },
 ]);
