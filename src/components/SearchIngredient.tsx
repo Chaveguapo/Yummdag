@@ -15,6 +15,7 @@ interface Recipe {
 function SearchIngredient() {
   const [inputIngredient, setInputIngredient] = useState("");
   const [recipes, setRecipes] = useState<Recipe[]>([]);
+
   function getRecipes() {
     console.log("getRecipes");
     if (!inputIngredient.trim()) return;
