@@ -1,13 +1,30 @@
-# Yummdag
+Welcome to Yummdag - 
 
-## Description
+#Overview
+The Yummdag Ingredient to Recipe Finder  is a web application designed to help users reduce food waste by finding recipes based on the ingredients they have at home. Users can input the ingredients they have on hand, and the application will suggest a variety of recipes that utilize those ingredients.
 
-This is an ongoing project 
+#Features
+-Ingredient-based Recipe Search: Users can enter their available ingredients and find matching recipes.
+-User-friendly Interface: Intuitive and responsive design for an optimal user experience.
+-Recipe Database Integration: Access to a large database of recipes.
+-Customization: Filter recipes by meal type, cuisine, and dietary restrictions.
+-Save and Share: Save favorite recipes and share them with friends and family.
 
-## Status
+#Technologies Used
+Frontend:
+React
+JavaScript
+HTML
+CSS
+Bootstrap
 
-I'm currently actively working on this project and making regular updates. Feel free to check back for new features and improvements!
+Design:
+Figma
 
-## Contact
+Contact
+For any inquiries or feedback, please contact:
 
-If you have any questions or suggestions regarding this project, feel free to reach out to me.
+Cindy Chavez
+Email: chavela.guapo@gmail.com
+Portfolio: www.chavela.nl
+LinkedIn: Cindy Chavez
