@@ -26,5 +26,5 @@ For any inquiries or feedback, please contact:
 
 Cindy Chavez
 Email: chavela.guapo@gmail.com
-Portfolio: 
+Portfolio: https://portfolio-chave.web.app/
 LinkedIn: Cindy Chavez
