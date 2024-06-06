@@ -1,7 +1,7 @@
 Welcome to Yummdag 
 
 #Overview
-The Yummdag Ingredient to Recipe Finder  is a web application designed to help users reduce food waste by finding recipes based on the ingredients they have at home. Users can input the ingredients they have on hand, and the application will suggest a variety of recipes that utilize those ingredients.
+Yummdag Ingredient to Recipe Finder  is a web application designed to help users reduce food waste by finding recipes based on the ingredients they have at home. Users can input the ingredients they have on hand, and the application will suggest a variety of recipes that utilize those ingredients.
 
 #Features
 -Ingredient-based Recipe Search: Users can enter their available ingredients and find matching recipes.
