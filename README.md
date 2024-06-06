@@ -5,9 +5,13 @@ Yummdag Ingredient to Recipe Finder  is a web application designed to help users
 
 #Features
 -Ingredient-based Recipe Search: Users can enter their available ingredients and find matching recipes.
+
 -User-friendly Interface: Intuitive and responsive design for an optimal user experience.
+
 -Recipe Database Integration: Access to a large database of recipes.
+
 -Customization: Filter recipes by meal type, cuisine, and dietary restrictions.
+
 -Save and Share: Save favorite recipes and share them with friends and family.
 
 #Technologies Used
